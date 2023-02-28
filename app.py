@@ -11,7 +11,7 @@ import http.server
 
 @API.route("/api/search")
 def case1():
-    conn = psycopg2.connect(database="postgres", user='postgres', password='BVM@pollachi2', host='127.0.0.1', port= '5432')
+    conn = psycopg2.connect(database="postgres", user='postgres', password='1234', host='127.0.0.1', port= '5432')
 
     conn.autocommit = True
     cursor = conn.cursor()
@@ -56,7 +56,7 @@ def case1():
 @API.route("/api/branch")
 def case2():
    
-    conn = psycopg2.connect(database="postgres", user='postgres', password='BVM@pollachi2', host='127.0.0.1', port= '5432')
+    conn = psycopg2.connect(database="postgres", user='postgres', password='1234', host='127.0.0.1', port= '5432')
 
     conn.autocommit = True
     cursor = conn.cursor()
@@ -91,10 +91,3 @@ def case2():
     result = json.dumps(JSON)
     
     return result
-
-
-if __name__ == "__case1__":
-    case1()
-       
-if __name__ == "__case2__":
-    case2()
